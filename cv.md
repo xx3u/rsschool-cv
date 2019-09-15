@@ -32,7 +32,7 @@ def test_register_view(db, client, data):
     )
     assert response.status_code == 200
 ```
-```
+```html
 {% extends "base.html" %}
 {% load i18n %}
 
