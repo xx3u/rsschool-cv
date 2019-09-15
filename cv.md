@@ -17,6 +17,10 @@ Good analytical skills, goal-oriented, self-managed, active, responsible, hard-w
 
 ### Code examples
 ```python
+from django.db import models
+from django.contrib.auth.models import User
+
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     birthday = models.DateField(null=True, blank=True)
@@ -32,19 +36,26 @@ def test_register_view(db, client, data):
     )
     assert response.status_code == 200
 ```
-```html
-{% extends "base.html" %}
-{% load i18n %}
+```python
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.models import User
+from .models import Image, Profile
 
-{% block title %}{% trans "Register for an account" %}{% endblock %}
 
-{% block content %}
-<form method="post" action="{% url 'register' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="{% trans 'Submit' %}" />
-</form>
-{% endblock %}
+class ProfileInline(admin.StackedInline):
+    model = Profile
+    can_delete = False
+    verbose_name_plural = 'profile'
+
+
+class UserAdmin(BaseUserAdmin):
+    inlines = (ProfileInline, )
+
+
+admin.site.register(Image)
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
 ```
 
 ### Experience
