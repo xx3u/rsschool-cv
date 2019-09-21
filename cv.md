@@ -2,7 +2,7 @@
 
 ##### Address: Almaty, Djandarbekova, 169-9 || E-mail: yuliyahvan@yahoo.com || Mobile: +7 701 789-20-43
 
-![Image](my_image.jpg)
+![Image](./assets/images/my_image.jpg)
 
 ### Summary
 Become a full-stack developer (front-end & back-end) using life & work experience (9 years experience in finance, audit); 
