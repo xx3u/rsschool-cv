@@ -1,0 +1,67 @@
+body {
+	display: block;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	color: #24292e;
+	background-color: #fff;
+}
+
+.container {
+	max-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	margin: 0.67em 0;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+h4 {
+	font-style: italic;
+}
+
+h5 {
+	font-size: 0.875em;
+}
+
+img {
+	width: 25%;
+}
+
+p,
+ul,
+pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+.years {
+	font-style: italic;
+}
+
+code {
+	font-size: 0.9em;
+}
