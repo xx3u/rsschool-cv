@@ -9,160 +9,175 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Yuliya Khvan</h1>
-			<h4 class="contact-info">Address: Almaty, Djandarbekova, 169-9 || E-mail: yuliyahvan@yahoo.com || Mobile: +7 701 789-20-43</h4>
-			<img src="./assets/images/my_image.jpg" alt="По дороге к пику Турист">
-			<section class="summary">
-				<h3>Summary</h3>
-				<p>
-					Become a full-stack developer (front-end & back-end) using life & work experience (9 years experience in finance, audit); <br>
-					Thirsty for continuous growth & development, getting new knowledge; self- challenged person (change in work experience, industry, profession); 
-					<br>
-					Good analytical skills, goal-oriented, self-managed, active, responsible, hard-working, positive thinking, open for newness, mobile, <wbr>
-					disciplined, professional ethics supporter, healthy lifestyle supporter, sport active (marathoner, hiker)
-				</p>
-			</section>
-			<section class="skills">
-				<h3>Skills</h3>
-				<ul>
-					<li>Programming language: Python</li>
-					<li>Frameworks: Django</li>
-					<li>Version control system: Git</li>
-					<li>CI / CD: TravisCI, Gunicorn, Ngnix, AWS / DO, Docker, Docker-compose</li>
-					<li>TDD: Pytest, Pep8, Flake8</li>
-				</ul>
-			</section>
-			<section class="code">
-				<h3>Code examples</h3>
-				<pre>example 1:<code>
-from django.db import models
-from django.contrib.auth.models import User
-
-class Profile(models.Model):
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	birthday = models.DateField(null=True, blank=True)
-	contact_number = models.CharField(max_length=20, null=True)
-				</code></pre>
-				<pre>example 2:<code>
-def test_register_view(db, client, data):
-	response = client.get('/register/')
-	assert response.status_code == 200
-	response = client.post(
-			'/register/', {'username': 'test', 'password': 'test'}
-	)
-	assert response.status_code == 200
-				</code></pre>
-				<pre>example 3:<code>
-from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.models import User
-from .models import Image, Profile
-
-class ProfileInline(admin.StackedInline):
-	model = Profile
-	can_delete = False
-	verbose_name_plural = 'profile'
-
-class UserAdmin(BaseUserAdmin):
-	inlines = (ProfileInline, )
-
-admin.site.register(Image)
-admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
-				</code></pre>
-			</section>
-			<section class="experience">
-				<h3>Experience</h3>
-				<h4>Projects:</h4>
-				<ul>
-					<li>Django project for internet shop on github link: 
-						<a href="https://github.com/xx3u/django_module">https://github.com/xx3u/django_module</a>
-					</li>
-					<li>Social network project (in process) on domain: 
-						<a href="http://xx3u.ml/">xx3u.ml</a> and on github link: 
-						<a href="https://github.com/xx3u/social_network">https://github.com/xx3u/social_network</a>
-					</li>
-				</ul>
-				<h4>Intern in iMoney LLP</h4>
-				<p class="years">2019 August - present</p>
-				<p>iMoney - strategy developement in decision-making in credit process, terminals for micro-credit organizations 
-					<a href="https://3min.kz/">3min.kz</a>
-				</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Docker, docker-compose;</li>
-						<li>Sql db on postgres container;</li>
-						<li>Celery tasks & logs;</li>
-						<li>New credit scoring system code;</li>
-					</ul>
-				</p>
-				<h4>Head of Controlling, Central Asia in Sanofi-Aventis, Kazakhstan LLP</h4>
-				<p class="years">2018 June - 2019 July</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Team management of 5 people, consolidation over cluster including 8 countries (Kazakhstan, Uzbekistan, Georgia, Armenia, Azerbaijan, <wbr>
-							Turkmenistan, Kyrgyzstan, Tajikistan);</li>
-						<li>Budget Cycles, Reporting, Transfer Pricing, Internal Control;</li>
-					</ul>
-				</p>
-				<h4>Finance Controller in Sanofi-Aventis, Kazakhstan LLP</h4>
-				<p class="years">2016 August - 2018 May</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Consolidation over Central Asia cluster, Budgeting, Reporting;</li>
-					</ul>
-				</p>
-				<h4>Finance Controlling Supervisor in Abdi Ibrahim Global Pharm LLP</h4>
-				<p class="years">2014 July - 2016 July</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Overall responsibility for budgeting & reporting processes, reporting to & communication with HO;</li>
-						<li>Preparation of analytical information for Board of Directors and Business Review meetings, year-end forecasting/Business Plan;</li>
-					</ul>
-				</p>
-				<h4>Financial Analyst in Abdi Ibrahim Global Pharm LLP</h4>
-				<p class="years">2013 July - 2014 June</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Preparation of budget, financial reporting package</li>
-					</ul>
-				</p>
-				<h4>Experienced Consultant in PricewaterhouseCoopers LLP</h4>
-				<p class="years">2010 September - 2013 June</p>
-				<p class="responsibilities">
-					<ul>
-						<li>Experience in auditing of companies from oil&gas, retail industry, manufacturing and logistics businesses;</li>
-						<li>Specialization in accounting and audit, the risk assessment and review of internal controls;</li>
-						<li>Audit of financial statements prepared in compliance with PSA/JOA/IFRS of operating company;</li>
-						<li>Audit of retail & consumer multinational company with relevant assessment of internal control system;</li>
-					</ul>
-				</p>
-			</section>
-			<section class="education">
-				<h3>Education</h3>
-				<ul>
-					<li>2019: Codecademy: Introduction to Html; Learn CSS</li>
-					<li>2019: RS School: JavaScript Development Online</li>
-					<li>2019: Vault77 school: Django</li>
-					<li>2018: Vault77 school: Python</li>
-					<li>2010: KIMEP: MBA, Major in Accounting (Almaty)</li>
-					<li>2008: UWED: Bachelor in International Economic Relations (Tashkent)</li>
-				</ul>
-			</section>
-			<section class="english">
-				<h3>English</h3>
-				<p>
-					EPAM English test results: B1
-					<br>
-					Usage on every work starting from PwC in audit, all working documentation was on english as well as communication with Partners and Clients. 
-					<br>
-					During work in Abdi Ibrahim Global Pharm, english used extensively (in communication) as my direct manager was from Turkey and <wbr>
-						all correspondence with HO was on english.
-					<br>
-					During work at Sanofi all correspondence, reporting (including presentations, deck and packages) and communication with HQ <wbr>
-						(located in France mainly) was on english. 
-				</p>
-			</section>
+      <header>
+        <h1>Yuliya Khvan</h1>
+        <ul class="contact_info">
+          <li class="contact_info_item">Address: Kazakhstan, Almaty, Abaya 109/6 4-14 ||</li>  
+          <li class="contact_info_item">E-mail: <a href="mailto:yuliyahvan@yahoo.com">yuliyahvan@yahoo.com</a> ||</li>
+          <li class="contact_info_item">Mobile: +7 701 789-20-43</li>  
+        </ul>
+      </header>
+      <main>
+        <img src="./assets/images/my_image.jpg" alt="По дороге к пику Турист">
+        <section class="summary">
+          <h2>Summary</h2>
+          <p>
+            Become a full-stack developer using life & work experience (10 years experience in finance, audit, pharmaceutical and banking industries); <br>
+            Thirsty for continuous growth & development, getting new knowledge; self-challenged person (changes in work experience, industry, profession); 
+            <br>
+            Good analytical skills, goal-oriented, self-managed, active, responsible, hard-working, positive thinking, open for newness, mobile, <wbr>
+            disciplined, professional ethics supporter, healthy lifestyle supporter, sport active (marathoner, hiker);
+          </p>
+        </section>
+        <section class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>Programming languages: JavaScript, Python</li>
+            <li>Libraries, Frameworks: React, Redux, JQuery, Django</li>
+            <li>Version control system: Git</li>
+            <li>HTML / CSS, Sass</li>
+            <li>Responsive design, TDD</li>
+          </ul>
+        </section>
+        <section class="code">
+          <h3>Code examples</h3>
+          <pre>example 1:<code>
+            useEffect(() => {
+              const retrievedData = async () => {
+                const response = await api.get('/quotes.json');
+                const retrievedQuotes = Object.keys(response.data).map(id => {
+                  return {...response.data[id], id}
+                });
+                setQuotes(retrievedQuotes);
+              };
+              setLoading(true);
+              retrievedData().finally(() => {
+                setLoading(false)
+              })
+            }, [setLoading, quotes.length])
+          </code></pre>
+        </section>
+        <section class="experience">
+          <h3>Experience</h3>
+          <aside>
+            <h4>Projects:</h4>
+            <ul>
+              <li>HTML / CSS coding in accordance with Figma layout: 
+                <a href="https://github.com/xx3u/figma">https://github.com/xx3u/figma</a>
+              </li>
+              <li>HTML / CSS coding using Sass: 
+                <a href="https://github.com/xx3u/konstruct">https://github.com/xx3u/konstruct</a>
+              </li>
+            </ul>
+          </aside>
+          <article>
+            <h4 class="position">Data Analyst in Sberbank</h4>
+            <p class="years">2019 November - 2021 January</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Instruments: SQL, Excel, Power Query, Power Pivot, IBM SPSS Modeler, Qlik Sense</li>
+                <li>
+                  Achievements: Data analysis tool for business assessing partners’ share which attracted clients in main bank products: loans and cards. This helped to reduce time    preparation from several days to several hours using SQL.
+                  Development of Manager’s efficiency report based on certain metrics helped to reduce time preparation twice and automatize process based on SQL scripts. Data visualization through Qlik Sense.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Intern in iMoney LLP</h4>
+            <p class="years">2019 August - October</p>
+            <p>iMoney - strategy developement in decision-making in credit process, terminals for micro-credit organizations 
+              <a href="https://3min.kz/">3min.kz</a>
+            </p>
+            <div class="responsibilities">
+              <ul>
+                <li>Docker, docker-compose;</li>
+                <li>Sql db on postgres container;</li>
+                <li>Celery tasks & logs;</li>
+                <li>New credit scoring system code;</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Head of Controlling, Central Asia in Sanofi-Aventis, Kazakhstan LLP</h4>
+            <p class="years">2018 June - 2019 July</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Team management of 5 people, consolidation over cluster including 8 countries (Kazakhstan, Uzbekistan, Georgia, Armenia, Azerbaijan, <wbr>
+                  Turkmenistan, Kyrgyzstan, Tajikistan);</li>
+                <li>Budget Cycles, Reporting, Transfer Pricing, Internal Control;</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Finance Controller in Sanofi-Aventis, Kazakhstan LLP</h4>
+            <p class="years">2016 August - 2018 May</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Consolidation over Central Asia cluster, Budgeting, Reporting;</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Finance Controlling Supervisor in Abdi Ibrahim Global Pharm LLP</h4>
+            <p class="years">2014 July - 2016 July</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Overall responsibility for budgeting & reporting processes, reporting to & communication with HO;</li>
+                <li>Preparation of analytical information for Board of Directors and Business Review meetings, year-end forecasting/Business Plan;</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Financial Analyst in Abdi Ibrahim Global Pharm LLP</h4>
+            <p class="years">2013 July - 2014 June</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Preparation of budget, financial reporting package</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h4 class="position">Experienced Consultant in PricewaterhouseCoopers LLP</h4>
+            <p class="years">2010 September - 2013 June</p>
+            <div class="responsibilities">
+              <ul>
+                <li>Experience in auditing of companies from oil&gas, retail industry, manufacturing and logistics businesses;</li>
+                <li>Specialization in accounting and audit, the risk assessment and review of internal controls;</li>
+                <li>Audit of financial statements prepared in compliance with PSA/JOA/IFRS of operating company;</li>
+                <li>Audit of retail & consumer multinational company with relevant assessment of internal control system;</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section class="education">
+          <h3>Education</h3>
+          <ul>
+            <li>2021: Attractor School: Full-Stack Developer (JavaScript)</li>
+            <li>2019: Codecademy: Introduction to Html; Learn CSS</li>
+            <li>2019: RS School: JavaScript Development Online</li>
+            <li>2019: Vault77 school: Django</li>
+            <li>2018: Vault77 school: Python</li>
+            <li>2010: KIMEP: MBA, Major in Accounting (Almaty)</li>
+            <li>2008: UWED: Bachelor in International Economic Relations (Tashkent)</li>
+          </ul>
+        </section>
+        <section class="english">
+          <h3>English</h3>
+          <p>
+            EPAM English test results: B1-A2
+            <br>
+            Usage on every work starting from PwC in audit, all working documentation was on english as well as communication with Partners and Clients. 
+            During work in Abdi Ibrahim Global Pharm, english used extensively (in communication) as my direct manager was from Turkey and all correspondence with HO was on english.
+            During work at Sanofi all correspondence, reporting (including presentations, deck and packages) and communication with HQ (located in France mainly) was on english. 
+          </p>
+        </section>
+      </main>
+      <footer class="contacts">
+        <a class="contact_item" href="https://github.com/xx3u">My Github Account</a>
+        <a class="contact_item year" href="#">2021</a>
+        <a class="contact_item rs" href="https://rs.school/js/"></a>
+      </footer>
 		</div>
 	</body>
 </html>
