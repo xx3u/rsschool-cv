@@ -1,72 +1,51 @@
 # Yuliya Khvan
 
-##### Address: Almaty, Djandarbekova, 169-9 || E-mail: yuliyahvan@yahoo.com || Mobile: +7 701 789-20-43
+##### Address: Kazakhstan, Almaty, Abaya 109/6 4-14 || E-mail: yuliyahvan@yahoo.com || Mobile: +7 701 789-20-43
 
-![Image](./assets/images/my_image.jpg)
+<img src="./assets/images/my_image.jpg" width="25%">
 
 ### Summary
-Become a full-stack developer (front-end & back-end) using life & work experience (9 years experience in finance, audit); 
+Become a full-stack developer using life & work experience (10 years experience in finance, audit, pharmaceutical and banking industries); 
 Thirsty for continuous growth & development, getting new knowledge; self- challenged person (change in work experience, industry, profession); 
 
 Good analytical skills, goal-oriented, self-managed, active, responsible, hard-working, positive thinking, open for newness, mobile, disciplined, professional ethics supporter, healthy lifestyle supporter, sport active (marathoner, hiker)
 
 ### Skills
-* Programming language: Python
-* Frameworks: Django
+* Programming languages: JavaScript, Python
+* Libraries, Frameworks: React, Redux, JQuery, Django
 * Version control: Git
-* CI / CD: TravisCI, Gunicorn, Ngnix, AWS / DO, Docker, Docker-compose
-* TDD: Pytest, Pep8, Flake8
+* HTML / CSS, Sass
+* Responsive design, TDD
 
 ### Code examples
-```python
-from django.db import models
-from django.contrib.auth.models import User
-
-
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    birthday = models.DateField(null=True, blank=True)
-    contact_number = models.CharField(max_length=20, null=True)
-```
-```python
-def test_register_view(db, client, data):
-    response = client.get('/register/')
-    assert response.status_code == 200
-
-    response = client.post(
-        '/register/', {'username': 'test', 'password': 'test'}
-    )
-    assert response.status_code == 200
-```
-```python
-from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.models import User
-from .models import Image, Profile
-
-
-class ProfileInline(admin.StackedInline):
-    model = Profile
-    can_delete = False
-    verbose_name_plural = 'profile'
-
-
-class UserAdmin(BaseUserAdmin):
-    inlines = (ProfileInline, )
-
-
-admin.site.register(Image)
-admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
+```javascript
+useEffect(() => {
+              const retrievedData = async () => {
+                const response = await api.get('/quotes.json');
+                const retrievedQuotes = Object.keys(response.data).map(id => {
+                  return {...response.data[id], id}
+                });
+                setQuotes(retrievedQuotes);
+              };
+              setLoading(true);
+              retrievedData().finally(() => {
+                setLoading(false)
+              })
+            }, [setLoading, quotes.length])
 ```
 
 ### Experience
 #### *Projects:*
-* Django project for internet shop on github link: https://github.com/xx3u/django_module
-* Social network project (in process) on domain: http://xx3u.ml/ and on github link: https://github.com/xx3u/social_network
+* HTML / CSS coding in accordance with Figma layout: https://github.com/xx3u/figma
+* HTML / CSS coding using Sass: https://github.com/xx3u/konstruct
 
+#### *Data Analyst in Sberbank*
+*2019 November - 2021 January*   
+- Instruments: SQL, Excel, Power Query, Power Pivot, IBM SPSS Modeler, Qlik Sense; 
+- Achievements: Data analysis tool for business assessing partners’ share which attracted clients in main bank products: loans and cards. This helped to reduce time    preparation from several days to several hours using SQL. Development of Manager’s efficiency report based on certain metrics helped to reduce time preparation twice and automatize process based on SQL scripts. Data visualization through Qlik Sense.
+                
 #### *Intern in iMoney LLP*
-*2019 August - present*   
+*2019 August - October*   
 iMoney - strategy developement in decision-making in credit process, terminals for micro-credit organizations [3min.kz](https://3min.kz/)
 - Docker, docker-compose; 
 - Sql db on postgres container; 
@@ -111,7 +90,5 @@ iMoney - strategy developement in decision-making in credit process, terminals f
 EPAM English test results: B1
 
 Usage on every work starting from PwC in audit, all work documentation was on english as well as communication with Partners and Clients. 
-
 During work in Abdi Ibrahim Global Pharm, english used extensively (in communication) as my direct manager was from Turkey and all correspondance with HO was on english.
-
 During work in Sanofi all correspondance, reporting (including presentations, deck and packages) and communication with HQ (located in France mainly) was on english. 
