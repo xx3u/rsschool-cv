@@ -9,15 +9,10 @@ body {
 
 .container {
 	max-width: 1024px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
 }
 
-h1,
-h3,
-h4,
-h5,
-h6 {
+h1, h3, h4, h5, h6 {
 	margin-top: 24px;
 	margin-bottom: 16px;
 	font-weight: 600;
@@ -45,11 +40,11 @@ h5 {
 
 img {
 	width: 25%;
+  float: left;
+  margin-right: 30px;
 }
 
-p,
-ul,
-pre {
+p, ul, pre {
 	margin-top: 0;
 	margin-bottom: 16px;
 }
@@ -64,4 +59,33 @@ ul {
 
 code {
 	font-size: 0.9em;
+}
+.contact_info {
+  list-style: none;
+}
+.contact_info_item {
+  display: inline-block;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  border-top: 2px solid #eaecef;
+}
+.contact_item {
+  color: black;
+  margin-top: 20px;
+}
+
+.contact_item.rs {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background: url('https://rs.school/images/rs_school_js.svg') 0 0 no-repeat;
+}
+
+.contact_item.year {
+  text-decoration: none;
+  color: black;
 }
